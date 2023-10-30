@@ -5,11 +5,7 @@ import loader.ImageLoaderImpl
 
 fun ImageView.load(
     uri: String,
-    imageLoader: ImageLoader = ImageLoaderImpl()
+    imageLoader: ImageLoader = Compactor.imageLoader()
 ) {
-
-}
-
-fun ImageView.load(bitmap: Bitmap) {
-
+    imageLoader.load(this, uri)
 }

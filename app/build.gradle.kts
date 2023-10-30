@@ -31,6 +31,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    viewBinding {
+        enable = true
+    }
     kotlinOptions {
         jvmTarget = "1.8"
     }
@@ -38,10 +41,12 @@ android {
 
 dependencies {
 
+    implementation(project(":compactor-base"))
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.constraintlayout)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)

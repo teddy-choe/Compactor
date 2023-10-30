@@ -11,4 +11,6 @@ object Compactor {
             decoder = BitmapDecoder()
         )
     }
+
+    fun imageLoader() = imageLoader
 }
